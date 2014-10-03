@@ -1,0 +1,5 @@
+
+# View live mysql queries #new
+SHOW VARIABLES LIKE "general_log%";
+SET GLOBAL general_log = 'ON';
+SET GLOBAL general_log = 'OFF';

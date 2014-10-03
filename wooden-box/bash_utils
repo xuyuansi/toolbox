@@ -1,0 +1,3 @@
+
+# print the full path with file name
+find `pwd` -name <filename> #new
