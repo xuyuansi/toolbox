@@ -7,3 +7,18 @@ ln -s /path/to/file /path/to/symlink
 
 # pipe to pasteboard
 pbcopy pbpaste
+
+# monitor the change of command result
+watch -d=cumulative -n 1 <command e.g. ls>
+
+# see the content of a jar 
+jar -tvf <jarname>
+# unjar a jar 
+jar -xvf <jarname>
+
+# see the content of a file inside a jar
+unzip -q -c <jarname> <filepath> 
+or
+unzip -p    <jarname> <filepath>
+
+
