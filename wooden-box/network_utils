@@ -1,0 +1,3 @@
+
+sudo tcpdump -ien1 -Xlns0 host <hostName> and port <portNumber> 
+sudo tcpdump -ilo0 -Xlns0 port <portNumber> 

@@ -1,0 +1,24 @@
+branchhint=$1
+recordcount=$( git branch | grep -i $branchhint | wc -l )
+
+if [ $recordcount -eq 0 ] 
+then
+	echo "The branch name hint you provided '"$branchhint"' doesn't match any branch name."
+	exit
+elif [ $recordcount -gt 1 ] 
+then
+	echo "The branch name hint you provided '"$branchhint"' is not specific enough. There are "${recordcount# }" records that match."
+ 	git branch | grep -i $branchhint
+	exit
+fi
+
+targetbranch=$( git branch | grep -i $branchhint )
+containsStar=$( git branch | grep -i $branchhint | grep \* | wc -l )
+
+if [ $containsStar -eq 1 ]
+then 
+	echo "You are already on branch "${targetbranch#* }
+else
+        git checkout $targetbranch	
+fi
+

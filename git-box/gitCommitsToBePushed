@@ -1,0 +1,6 @@
+#!/bin/sh
+set -u 
+branch=$(git rev-parse --abbrev-ref HEAD)
+echo $branch
+git fetch
+git --no-pager log $branch --not origin/$branch

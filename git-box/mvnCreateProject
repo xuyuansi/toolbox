@@ -1,0 +1,9 @@
+#!/bin/sh 
+
+group=$1
+artifact=$2 
+pkg=$3 
+
+set -x
+
+mvn archetype:create -DgroupId=$group -DartifactId=$artifact -DpackageName=$pkg 

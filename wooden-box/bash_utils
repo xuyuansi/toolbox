@@ -1,3 +1,9 @@
 
 # print the full path with file name
 find `pwd` -name <filename> #new
+
+# create symbolic link to a file
+ln -s /path/to/file /path/to/symlink
+
+# pipe to pasteboard
+pbcopy pbpaste

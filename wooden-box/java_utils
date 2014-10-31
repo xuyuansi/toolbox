@@ -1,0 +1,4 @@
+
+# Run a single Java file
+> java -cp target/db-1.0-SNAPSHOT.jar:/Users/xsi/.m2/repository/mysql/mysql-connector-java/5.1.32/mysql-connector-java-5.1.32.jar:.  book/spike/xsi/AllBetaVerifiedUsers 
+> mvn exec:java -Dexec.mainClass="book.spike.xsi.AllBetaVerifiedUsers" 

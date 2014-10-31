@@ -1,0 +1,1 @@
+ps -ef | grep -v grep | grep '/Applications/Firefox.app/Contents/MacOS/firefox-bin -foreground' | awk '{print $2}' | xargs kill -9
