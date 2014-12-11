@@ -1,0 +1,8 @@
+# Show all the logs of this feature branch
+git log <develop>..<featureBranch>
+
+# Show all the files changed by this feature branch, except for the pom.xml files.
+git diff --name-status <develop>..<featureBranch> | grep -v pom.xml
+
+# Show the diff between 2 commits
+git diff <commit1> <commit2>

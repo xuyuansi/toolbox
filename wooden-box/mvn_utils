@@ -1,0 +1,2 @@
+# build project A, B, the modules A, B depends on, and the modules depending on A, B
+mvn clean install -pl A,B -amd -am
