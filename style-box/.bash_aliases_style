@@ -10,7 +10,6 @@ alias laf='ls -aF'
 
 #---------------------------------------------------------------------
 alias de='cd ~/Desktop'
-alias toolbox='cd ~/github/toolbox'
 
 alias vipf='vi ~/.profile'
 alias srpf='source ~/.profile'

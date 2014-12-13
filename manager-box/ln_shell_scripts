@@ -1,0 +1,20 @@
+#ln_shell_scripts
+
+. prop.properties
+SHELL_SCRIPTS_FOLDER=${shell_scripts_folder}
+
+if [ -d "$SHELL_SCRIPTS_FOLDER" ]; then
+  echo "The shell_scripts directory already exists at: "$SHELL_SCRIPTS_FOLDER
+else 
+  echo "mkdir $SHELL_SCRIPTS_FOLDER ..."
+  mkdir $SHELL_SCRIPTS_FOLDER 
+  
+  find ../ -executable -type f ! -path "../.git/*" | while read line; do
+    RELATIVE_PATH=$line
+    ABSOLUTE_PATH=`realpath $RELATIVE_PATH`
+    BASE_NAME=`basename $RELATIVE_PATH`
+
+    echo "ln -s $SHELL_SCRIPTS_FOLDER/$BASE_NAME $ABSOLUTE_PATH"
+    ln -s $ABSOLUTE_PATH $SHELL_SCRIPTS_FOLDER/$BASE_NAME
+  done
+fi
