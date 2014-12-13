@@ -1,0 +1,25 @@
+#.bash_aliases_style
+
+#-----------------
+alias lal='ls -al'
+alias la='ls -a'
+alias ll='ls -l'
+alias lf='ls -F'
+alias laf='ls -aF'
+#-----------------
+
+#---------------------------------------------------------------------
+alias de='cd ~/Desktop'
+alias toolbox='cd ~/github/toolbox'
+
+alias vipf='vi ~/.profile'
+alias srpf='source ~/.profile'
+
+alias sqlroot='mysql -uroot -pr00t mgdb'
+#---------------------------------------------------------------------
+
+#---------------------------------------------------------------------
+alias env='/usr/bin/env |sort' 
+alias c='clear'
+#---------------------------------------------------------------------
+

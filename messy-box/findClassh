@@ -1,0 +1,38 @@
+#!/bin/sh
+
+# parameterize
+
+usage="Usage: $0 dir classname"
+
+#set -x
+set -u
+
+dir=$1
+class=$2
+
+if [ -z $dir ]; then
+   echo "dir is missing"
+   exit 1
+fi
+
+if [ -z $class ]; then
+   echo "class is missing"
+   exit 1
+fi
+
+#flist=$(find $dir -name \*.jar | while read FILENAME)
+#echo $flist
+
+find $dir -name \*.jar | while read FILENAME
+do
+   i=${FILENAME}
+   echo Checking "$i" ...
+   o=$(jar tf "$i" |grep $2);
+   if [ $? = 0 ]; then
+      echo $i
+      for t in $o; do
+         echo "   $t"
+      done
+      echo
+   fi
+done
