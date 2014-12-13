@@ -1,0 +1,3 @@
+#!/bin/sh
+set -u
+find . -name \*.iws -o -name \*.ipr -o -name \*.iml -o \( -name .idea -a -type d \) | xargs rm -vrf
