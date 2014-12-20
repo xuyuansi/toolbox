@@ -1,0 +1,10 @@
+ZK_NODES=`cat zknodes.txt`
+
+IFS=',' read -ra ADDR <<< "$ZK_NODES"
+for i in "${ADDR[@]}"; do
+if [[ $i == *-*-*-*-*:* ]];
+then 
+  i=${i// }
+  echo "delete /com/xoom/service/"$i 
+fi 
+done
