@@ -5,6 +5,6 @@ for i in "${ADDR[@]}"; do
 if [[ $i == *-*-*-*-*:* ]];
 then 
   i=${i// }
-  echo "delete /com/xoom/service/"$i 
+  echo "delete /com/xxxx/service/"$i 
 fi 
 done
