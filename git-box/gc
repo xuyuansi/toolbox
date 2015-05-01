@@ -22,3 +22,4 @@ else
         git checkout $targetbranch	
 fi
 
+git br

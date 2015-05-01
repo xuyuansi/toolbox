@@ -10,6 +10,7 @@ pbcopy pbpaste
 
 # monitor the change of command result
 watch -d=cumulative -n 1 <command e.g. ls>
+watch -d=cumulative -n 1 "echo 'ls /com/xoom/service' | zkCli"
 
 # see the content of a jar 
 jar -tvf <jarname>
@@ -21,4 +22,5 @@ unzip -q -c <jarname> <filepath>
 or
 unzip -p    <jarname> <filepath>
 
-
+# print java homes for all versions
+/usr/libexec/java_home -V

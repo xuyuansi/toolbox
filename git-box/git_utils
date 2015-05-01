@@ -6,3 +6,6 @@ git diff --name-status <develop>..<featureBranch> | grep -v pom.xml
 
 # Show the diff between 2 commits
 git diff <commit1> <commit2>
+
+# Delete local tracking of remote branches that doesn't exist anymore
+git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d

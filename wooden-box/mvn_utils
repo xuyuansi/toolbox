@@ -1,2 +1,3 @@
 # build project A, B, the modules A, B depends on, and the modules depending on A, B
 mvn clean install -pl A,B -amd -am
+mvn -pl parentModule/module -am clean compil #build module with all the dependencies

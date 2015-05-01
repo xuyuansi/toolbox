@@ -1,0 +1,3 @@
+version=$1
+
+mvn release:update-versions -DdevelopmentVersion=$version -Ddistribution.build=true
