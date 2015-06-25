@@ -1,0 +1,33 @@
+echo "Step 1: checking if the working directory is clean..."
+recordcount=$( git st | grep "working directory clean" |  wc -l )
+if [ $recordcount -eq 0 ] 
+then
+        echo "Result: Aha, your working directory is not clean."
+        exit
+elif [ $recordcount -eq 1 ] 
+then
+        echo "Result: Great, your working directory is clean and you are ready to go!"
+fi
+
+echo "Step 2: checking if the current directory is trunk..." 
+currentdir=${PWD##*/}
+if [ $result != 'trunk' ]
+then
+       echo "Result: Aha, you are not under trunk."
+       exit
+elif
+then 
+       echo "Result: Great, your current directory is trunk and you are good to go!" 
+fi
+
+echo "Step 3: checking out the develop branch..." 
+gc develop
+gc develop
+
+echo "Step 4: pulling newest from develop..." 
+git pull
+
+echo "Step 5: getting the pom version..."
+
+
+

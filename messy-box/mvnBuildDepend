@@ -1,0 +1,7 @@
+if [ $# -lt 1 ] ; then
+        echo Please specify the module name. E.g.: remittance/remittance-disbursement
+fi
+
+MODULE=$1
+
+mvn -pl $MODULE -am clean install -PskipITs,skipTests
