@@ -1,0 +1,10 @@
+all_commits=$( git rev-list 52b792c^.. 27fc004 --author="Xuyuan Si" )
+for i in $all_commits; do
+is_merge=`git cat-file -p $i | grep parent | wc -l`
+if [ $is_merge -eq 2 ]
+then
+  git revert -n $i -m 1; 
+else
+  git revert -n $i; 
+fi
+done

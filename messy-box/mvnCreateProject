@@ -6,4 +6,4 @@ pkg=$3
 
 set -x
 
-mvn archetype:create -DgroupId=$group -DartifactId=$artifact -DpackageName=$pkg 
+mvn archetype:generate -DgroupId=$group -DartifactId=$artifact -DpackageName=$pkg 
